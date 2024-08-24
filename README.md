@@ -23,6 +23,10 @@ This repository contains a .NET-based application designed to automate the proce
 
 Run the application and enter `GameID` or `Game Name` and search in the database that contains `7100 Games`
 
+### Download
+
+Download Here `https://www.mediafire.com/file/3qbqa2x336ghvje/PS3GameUpdateDownloader.rar/file`
+
 ### Contributing
 
 Contributions are welcome! Please fork the repository, make your changes, and submit a pull request.
