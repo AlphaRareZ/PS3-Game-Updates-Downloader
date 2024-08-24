@@ -1,0 +1,175 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "D:\\Projects\\C#\\GUI\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{F83F8D91-54CB-434F-9A47-400BE761F9F1}|PS3GameUpdateDownloader.csproj|d:\\projects\\c#\\gui\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F83F8D91-54CB-434F-9A47-400BE761F9F1}|PS3GameUpdateDownloader.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F83F8D91-54CB-434F-9A47-400BE761F9F1}|PS3GameUpdateDownloader.csproj|d:\\projects\\c#\\gui\\view\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F83F8D91-54CB-434F-9A47-400BE761F9F1}|PS3GameUpdateDownloader.csproj|solutionrelative:view\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F83F8D91-54CB-434F-9A47-400BE761F9F1}|PS3GameUpdateDownloader.csproj|d:\\projects\\c#\\gui\\view\\form1.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F83F8D91-54CB-434F-9A47-400BE761F9F1}|PS3GameUpdateDownloader.csproj|solutionrelative:view\\form1.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F83F8D91-54CB-434F-9A47-400BE761F9F1}|PS3GameUpdateDownloader.csproj|d:\\projects\\c#\\gui\\model\\scrapper.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F83F8D91-54CB-434F-9A47-400BE761F9F1}|PS3GameUpdateDownloader.csproj|solutionrelative:model\\scrapper.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F83F8D91-54CB-434F-9A47-400BE761F9F1}|PS3GameUpdateDownloader.csproj|d:\\projects\\c#\\gui\\view\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{F83F8D91-54CB-434F-9A47-400BE761F9F1}|PS3GameUpdateDownloader.csproj|solutionrelative:view\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F83F8D91-54CB-434F-9A47-400BE761F9F1}|PS3GameUpdateDownloader.csproj|d:\\projects\\c#\\gui\\resource1.resx||{FF4D6ACA-9352-4A5F-821E-F4D6EBDCAB11}",
+      "RelativeMoniker": "D:0:0:{F83F8D91-54CB-434F-9A47-400BE761F9F1}|PS3GameUpdateDownloader.csproj|solutionrelative:resource1.resx||{FF4D6ACA-9352-4A5F-821E-F4D6EBDCAB11}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F83F8D91-54CB-434F-9A47-400BE761F9F1}|PS3GameUpdateDownloader.csproj|d:\\projects\\c#\\gui\\model\\ps3updatesscrapper.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F83F8D91-54CB-434F-9A47-400BE761F9F1}|PS3GameUpdateDownloader.csproj|solutionrelative:model\\ps3updatesscrapper.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F83F8D91-54CB-434F-9A47-400BE761F9F1}|PS3GameUpdateDownloader.csproj|D:\\Projects\\C#\\GUI\\controller\\ps3updatescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F83F8D91-54CB-434F-9A47-400BE761F9F1}|PS3GameUpdateDownloader.csproj|solutionrelative:controller\\ps3updatescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F83F8D91-54CB-434F-9A47-400BE761F9F1}|PS3GameUpdateDownloader.csproj|d:\\projects\\c#\\gui\\model\\gameupdate.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F83F8D91-54CB-434F-9A47-400BE761F9F1}|PS3GameUpdateDownloader.csproj|solutionrelative:model\\gameupdate.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 6,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{b1e99781-ab81-11d0-b683-00aa00a3ee26}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Form1.cs",
+              "DocumentMoniker": "D:\\Projects\\C#\\GUI\\View\\Form1.cs",
+              "RelativeDocumentMoniker": "View\\Form1.cs",
+              "ToolTip": "D:\\Projects\\C#\\GUI\\View\\Form1.cs",
+              "RelativeToolTip": "View\\Form1.cs",
+              "ViewState": "AQIAAEQAAAAAAAAAAAAqwFIAAAAvAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-08-24T11:06:09.52Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Form1.Designer.cs",
+              "DocumentMoniker": "D:\\Projects\\C#\\GUI\\View\\Form1.Designer.cs",
+              "RelativeDocumentMoniker": "View\\Form1.Designer.cs",
+              "ToolTip": "D:\\Projects\\C#\\GUI\\View\\Form1.Designer.cs",
+              "RelativeToolTip": "View\\Form1.Designer.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAuwAQAAAApAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-08-24T11:06:05.61Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Scrapper.cs",
+              "DocumentMoniker": "D:\\Projects\\C#\\GUI\\Model\\Scrapper.cs",
+              "RelativeDocumentMoniker": "Model\\Scrapper.cs",
+              "ToolTip": "D:\\Projects\\C#\\GUI\\Model\\Scrapper.cs",
+              "RelativeToolTip": "Model\\Scrapper.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-08-24T11:04:32.656Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "Form1.cs [Design]",
+              "DocumentMoniker": "D:\\Projects\\C#\\GUI\\View\\Form1.cs",
+              "RelativeDocumentMoniker": "View\\Form1.cs",
+              "ToolTip": "D:\\Projects\\C#\\GUI\\View\\Form1.cs [Design]",
+              "RelativeToolTip": "View\\Form1.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-08-24T10:48:45.522Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "Resource1.resx",
+              "DocumentMoniker": "D:\\Projects\\C#\\GUI\\Resource1.resx",
+              "RelativeDocumentMoniker": "Resource1.resx",
+              "ToolTip": "D:\\Projects\\C#\\GUI\\Resource1.resx",
+              "RelativeToolTip": "Resource1.resx",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001005|",
+              "WhenOpened": "2024-08-24T10:48:28.295Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Program.cs",
+              "DocumentMoniker": "D:\\Projects\\C#\\GUI\\Program.cs",
+              "RelativeDocumentMoniker": "Program.cs",
+              "ToolTip": "D:\\Projects\\C#\\GUI\\Program.cs",
+              "RelativeToolTip": "Program.cs",
+              "ViewState": "AQIAAAMAAAAAAAAAAAAAABYAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-08-24T10:47:40Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "PS3UpdatesScrapper.cs",
+              "DocumentMoniker": "D:\\Projects\\C#\\GUI\\Model\\PS3UpdatesScrapper.cs",
+              "RelativeDocumentMoniker": "Model\\PS3UpdatesScrapper.cs",
+              "ToolTip": "D:\\Projects\\C#\\GUI\\Model\\PS3UpdatesScrapper.cs",
+              "RelativeToolTip": "Model\\PS3UpdatesScrapper.cs",
+              "ViewState": "AQIAAAkAAAAAAAAAAAAAAAwAAABQAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-08-24T10:42:58.469Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "PS3UpdatesController.cs",
+              "DocumentMoniker": "D:\\Projects\\C#\\GUI\\Controller\\PS3UpdatesController.cs",
+              "RelativeDocumentMoniker": "Controller\\PS3UpdatesController.cs",
+              "ToolTip": "D:\\Projects\\C#\\GUI\\Controller\\PS3UpdatesController.cs",
+              "RelativeToolTip": "Controller\\PS3UpdatesController.cs",
+              "ViewState": "AQIAABkAAAAAAAAAAAAewCcAAAAZAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-08-23T19:37:15.487Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "GameUpdate.cs",
+              "DocumentMoniker": "D:\\Projects\\C#\\GUI\\Model\\GameUpdate.cs",
+              "RelativeDocumentMoniker": "Model\\GameUpdate.cs",
+              "ToolTip": "D:\\Projects\\C#\\GUI\\Model\\GameUpdate.cs",
+              "RelativeToolTip": "Model\\GameUpdate.cs",
+              "ViewState": "AQIAABYAAAAAAAAAAAAkwBMAAAAhAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-08-24T10:42:07.152Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
