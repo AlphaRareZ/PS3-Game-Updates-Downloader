@@ -5,10 +5,7 @@ using System.ComponentModel;
 using System.IO;
 using System.Linq;
 using System.Net;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Forms;
-using System.Xml.Linq;
+
 
 namespace GUI.Controller
 {
@@ -18,6 +15,8 @@ namespace GUI.Controller
         private PS3UpdatesDownloaderGUI view;
         // Model
         private PS3UpdatesScrapper scrapper = new PS3UpdatesScrapper();
+        // Formatter
+        public Formatter formatter = new Formatter();
 
         public event Action<int> ProgressChanged;
         public event Action DownloadCompleted;
@@ -46,7 +45,7 @@ namespace GUI.Controller
             if (string.IsNullOrEmpty(text))
             {
                 // Handle empty or null search name
-                return new List<GameUpdate>();
+                return GetUpdates();
             }
 
             // Retrieve the list of updates once
@@ -77,6 +76,7 @@ namespace GUI.Controller
             //Extract file name from url
             string filename = Path.GetFileName(new Uri(url).AbsolutePath);
             string filePath = Path.Combine(dir,filename);
+            //Download File Asynchronously
             webClient.DownloadFileAsync(new Uri(url), filePath);
         }
 
@@ -101,17 +101,6 @@ namespace GUI.Controller
             }
         }
 
-        public string FormatFileSize(long fileSize)
-        {
-            // Convert file size to a human-readable format
-            if (fileSize >= (1 << 30))
-                return $"{fileSize / (1 << 30):0.##} GB";
-            else if (fileSize >= (1 << 20))
-                return $"{fileSize / (1 << 20):0.##} MB";
-            else if (fileSize >= (1 << 10))
-                return $"{fileSize / (1 << 10):0.##} KB";
-            else
-                return $"{fileSize} bytes";
-        }
+        
     }
 }

@@ -26,16 +26,6 @@ namespace GUI
             dataGridView1.Columns[3].Visible = false;
         }
 
-        private void SearchButton_Click(object sender, System.EventArgs e)
-        {
-            dataGridView1.DataSource =  controller.Search(searchBox.Text);
-        }
-        private void RefreshDatabaseButton_Click(object sender, System.EventArgs e)
-        {
-
-            dataGridView1.DataSource = controller.GetUpdates();
-        }
-
         private void DownloadButton_Click(object sender, System.EventArgs e)
         {
             string dir = DownloadDirTextBox.Text;
@@ -45,15 +35,11 @@ namespace GUI
             {
                 var downloadURL = row.Cells[3].Value.ToString();
                 long fileSize = controller.GetFileSize(downloadURL);
-                sizes += $"Version {row.Cells[2].Value.ToString()}: {controller.FormatFileSize(fileSize)}\n";
+                sizes += $"Version {row.Cells[2].Value.ToString()}: {controller.formatter.FormatFileSize(fileSize)}\n";
                 totalSizes += fileSize;
             }
-
-            DialogResult result = MessageBox.Show(
-            $"{sizes} \nThe files sizes is {controller.FormatFileSize(totalSizes)}. Do you want to continue with the download?",
-            "File Size Confirmation",
-            MessageBoxButtons.YesNo,
-            MessageBoxIcon.Question);
+            string message = $"{sizes} \nThe files sizes is {controller.formatter.FormatFileSize(totalSizes)}. Do you want to continue with the download?";
+            DialogResult result = MessageBox.Show(message, "File Size Confirmation",MessageBoxButtons.YesNo,MessageBoxIcon.Question);
 
             // Check the result of the user's choice
             if (result == DialogResult.Yes)
@@ -81,6 +67,11 @@ namespace GUI
         private void OnDownloadCompleted()
         {
             MessageBox.Show("File Downloaded");
+        }
+
+        private void searchBox_TextChanged(object sender, EventArgs e)
+        {
+            dataGridView1.DataSource = controller.Search(searchBox.Text);
         }
     }
 }

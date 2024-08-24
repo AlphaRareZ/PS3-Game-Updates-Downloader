@@ -34,9 +34,7 @@ namespace GUI
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.searchBox = new System.Windows.Forms.TextBox();
             this.searchLabel = new System.Windows.Forms.Label();
-            this.refreshDatabaseButton = new System.Windows.Forms.Button();
             this.downloadButton = new System.Windows.Forms.Button();
-            this.searchButton = new System.Windows.Forms.Button();
             this.folderBrowserDialog1 = new System.Windows.Forms.FolderBrowserDialog();
             this.BrowseButton = new System.Windows.Forms.Button();
             this.DownloadDirLabel = new System.Windows.Forms.Label();
@@ -68,6 +66,7 @@ namespace GUI
             this.searchBox.Name = "searchBox";
             this.searchBox.Size = new System.Drawing.Size(422, 28);
             this.searchBox.TabIndex = 4;
+            this.searchBox.TextChanged += new System.EventHandler(this.searchBox_TextChanged);
             // 
             // searchLabel
             // 
@@ -79,17 +78,6 @@ namespace GUI
             this.searchLabel.TabIndex = 5;
             this.searchLabel.Text = "Search Box";
             // 
-            // refreshDatabaseButton
-            // 
-            this.refreshDatabaseButton.BackgroundImage = global::GUI.Resource1.refreshIcon;
-            this.refreshDatabaseButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.refreshDatabaseButton.Location = new System.Drawing.Point(672, 135);
-            this.refreshDatabaseButton.Name = "refreshDatabaseButton";
-            this.refreshDatabaseButton.Size = new System.Drawing.Size(55, 47);
-            this.refreshDatabaseButton.TabIndex = 8;
-            this.refreshDatabaseButton.UseVisualStyleBackColor = true;
-            this.refreshDatabaseButton.Click += new System.EventHandler(this.RefreshDatabaseButton_Click);
-            // 
             // downloadButton
             // 
             this.downloadButton.BackgroundImage = global::GUI.Resource1.downloadIcon;
@@ -100,17 +88,6 @@ namespace GUI
             this.downloadButton.TabIndex = 7;
             this.downloadButton.UseVisualStyleBackColor = true;
             this.downloadButton.Click += new System.EventHandler(this.DownloadButton_Click);
-            // 
-            // searchButton
-            // 
-            this.searchButton.BackgroundImage = global::GUI.Resource1.searchIcon;
-            this.searchButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.searchButton.Location = new System.Drawing.Point(653, 53);
-            this.searchButton.Name = "searchButton";
-            this.searchButton.Size = new System.Drawing.Size(74, 29);
-            this.searchButton.TabIndex = 6;
-            this.searchButton.UseVisualStyleBackColor = true;
-            this.searchButton.Click += new System.EventHandler(this.SearchButton_Click);
             // 
             // BrowseButton
             // 
@@ -159,9 +136,7 @@ namespace GUI
             this.Controls.Add(this.BrowseButton);
             this.Controls.Add(this.DownloadDirLabel);
             this.Controls.Add(this.DownloadDirTextBox);
-            this.Controls.Add(this.refreshDatabaseButton);
             this.Controls.Add(this.downloadButton);
-            this.Controls.Add(this.searchButton);
             this.Controls.Add(this.searchLabel);
             this.Controls.Add(this.searchBox);
             this.Controls.Add(this.dataGridView1);
@@ -181,9 +156,7 @@ namespace GUI
         public System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.TextBox searchBox;
         private System.Windows.Forms.Label searchLabel;
-        private System.Windows.Forms.Button searchButton;
         private System.Windows.Forms.Button downloadButton;
-        private System.Windows.Forms.Button refreshDatabaseButton;
         private FolderBrowserDialog folderBrowserDialog1;
         private Button BrowseButton;
         private Label DownloadDirLabel;
