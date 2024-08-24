@@ -8,15 +8,15 @@ using System.Windows.Forms;
 using HtmlAgilityPack;
 namespace GUI.Model
 {
-    internal class PS3UpdatesScrapper:Scrapper
+    internal class PS3UpdatesScrapper:IScrapper
     {
-        private readonly string url = "https://ps3.aldostools.org/updates.html";
+        private const string Url = "https://ps3.aldostools.org/updates.html";
 
-        private List<GameUpdate> gamesUpdates = new List<GameUpdate>();
+        private readonly List<GameUpdate> _gamesUpdates = new List<GameUpdate>();
         public bool Scrap()
         {
             var web = new HtmlWeb();
-            var doc = web.Load(url);
+            var doc = web.Load(Url);
 
             // Get all <tbody> elements
             var tbodyNodes = doc.DocumentNode.SelectNodes("//tbody");
@@ -42,7 +42,7 @@ namespace GUI.Model
                                 {
                                     data.Add(td.InnerText.Trim());
                                 }
-                                gamesUpdates.Add(new GameUpdate(data));
+                                _gamesUpdates.Add(new GameUpdate(data));
                             }
 
                         }
@@ -51,9 +51,9 @@ namespace GUI.Model
             }
             return true;
         }
-        public List<GameUpdate> getGamesUpdates()
+        public List<GameUpdate> GetGamesUpdates()
         {
-            return gamesUpdates;
+            return _gamesUpdates;
         }
     }
 }

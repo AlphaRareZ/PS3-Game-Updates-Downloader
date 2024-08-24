@@ -1,7 +1,7 @@
 ﻿
 namespace GUI.Model
 {
-    internal interface Scrapper
+    internal interface IScrapper
     {
         bool Scrap();
     }

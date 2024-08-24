@@ -1,56 +1,55 @@
-﻿using GUI.Model;
-using GUI.Controller;
-using System.Collections.Generic;
-using System.Security.Policy;
+﻿using System;
 using System.Windows.Forms;
-using System.Threading.Tasks;
-using System;
+using GUI.Controller;
 
-namespace GUI
+namespace GUI.View
 {
     public partial class PS3UpdatesDownloaderGUI : Form
     {
-        PS3UpdatesController controller;
+        private readonly PS3UpdatesController _controller;
+
         public PS3UpdatesDownloaderGUI()
         {
             InitializeComponent();
-            controller = new PS3UpdatesController(this);
-            controller.ProgressChanged += OnProgressChanged;
-            controller.DownloadCompleted += OnDownloadCompleted;
+            _controller = new PS3UpdatesController();
+            _controller.ProgressChanged += OnProgressChanged;
+            _controller.DownloadCompleted += OnDownloadCompleted;
         }
 
-        private void PS3GamesUpdater_Load(object sender, System.EventArgs e)
+        private void PS3GamesUpdater_Load(object sender, EventArgs e)
         {
-            controller.Scrap();
-            dataGridView1.DataSource = controller.GetUpdates();
+            _controller.Scrap();
+            dataGridView1.DataSource = _controller.GetUpdates();
             dataGridView1.Columns[3].Visible = false;
         }
 
-        private void DownloadButton_Click(object sender, System.EventArgs e)
+        private void DownloadButton_Click(object sender, EventArgs e)
         {
             string dir = DownloadDirTextBox.Text;
             long totalSizes = 0;
             string sizes = string.Empty;
-            foreach(DataGridViewRow row in dataGridView1.SelectedRows)
+            foreach (DataGridViewRow row in dataGridView1.SelectedRows)
             {
-                var downloadURL = row.Cells[3].Value.ToString();
-                long fileSize = controller.GetFileSize(downloadURL);
-                sizes += $"Version {row.Cells[2].Value.ToString()}: {controller.formatter.FormatFileSize(fileSize)}\n";
+                var downloadUrl = row.Cells[3].Value.ToString();
+                long fileSize = _controller.GetFileSize(downloadUrl);
+                sizes += $"Version {row.Cells[2].Value.ToString()}: {_controller.formatter.FormatFileSize(fileSize)}\n";
                 totalSizes += fileSize;
             }
-            string message = $"{sizes} \nThe files sizes is {controller.formatter.FormatFileSize(totalSizes)}. Do you want to continue with the download?";
-            DialogResult result = MessageBox.Show(message, "File Size Confirmation",MessageBoxButtons.YesNo,MessageBoxIcon.Question);
+
+            string message =
+                $"{sizes} \nThe files sizes is {_controller.formatter.FormatFileSize(totalSizes)}. Do you want to continue with the download?";
+            DialogResult result = MessageBox.Show(message, "File Size Confirmation", MessageBoxButtons.YesNo,
+                MessageBoxIcon.Question);
 
             // Check the result of the user's choice
             if (result == DialogResult.Yes)
             {
                 foreach (DataGridViewRow row in dataGridView1.SelectedRows)
                 {
-                    var downloadURL = row.Cells[3].Value.ToString();
-                    controller.DownloadFile(dir, downloadURL);
+                    var downloadUrl = row.Cells[3].Value.ToString();
+                    _controller.DownloadFile(dir, downloadUrl);
                 }
             }
-
         }
 
         private void BrowseButton_Click(object sender, System.EventArgs e)
@@ -59,6 +58,7 @@ namespace GUI
             fbd.ShowDialog();
             DownloadDirTextBox.Text = fbd.SelectedPath;
         }
+
         private void OnProgressChanged(int progressPercentage)
         {
             progressBar1.Value = progressPercentage;
@@ -71,7 +71,7 @@ namespace GUI
 
         private void searchBox_TextChanged(object sender, EventArgs e)
         {
-            dataGridView1.DataSource = controller.Search(searchBox.Text);
+            dataGridView1.DataSource = _controller.Search(searchBox.Text);
         }
     }
 }

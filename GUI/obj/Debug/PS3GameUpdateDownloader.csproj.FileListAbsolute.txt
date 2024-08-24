@@ -22,7 +22,6 @@ C:\Users\Muhammed Alaa Eddin\Documents\repos\PS3-Game-Updates-Downloader\GUI\bin
 C:\Users\Muhammed Alaa Eddin\Documents\repos\PS3-Game-Updates-Downloader\GUI\obj\Debug\PS3GameUpdateDownloader.csproj.AssemblyReference.cache
 C:\Users\Muhammed Alaa Eddin\Documents\repos\PS3-Game-Updates-Downloader\GUI\obj\Debug\GUI.Properties.Resources.resources
 C:\Users\Muhammed Alaa Eddin\Documents\repos\PS3-Game-Updates-Downloader\GUI\obj\Debug\GUI.Resource1.resources
-C:\Users\Muhammed Alaa Eddin\Documents\repos\PS3-Game-Updates-Downloader\GUI\obj\Debug\GUI.PS3UpdatesDownloaderGUI.resources
 C:\Users\Muhammed Alaa Eddin\Documents\repos\PS3-Game-Updates-Downloader\GUI\obj\Debug\PS3GameUpdateDownloader.csproj.GenerateResource.cache
 C:\Users\Muhammed Alaa Eddin\Documents\repos\PS3-Game-Updates-Downloader\GUI\obj\Debug\PS3GameUpdateDownloader.csproj.CoreCompileInputs.cache
 C:\Users\Muhammed Alaa Eddin\Documents\repos\PS3-Game-Updates-Downloader\GUI\obj\Debug\PS3GameU.27147D63.Up2Date
@@ -32,3 +31,4 @@ C:\Users\Muhammed Alaa Eddin\Documents\repos\PS3-Game-Updates-Downloader\GUI\bin
 C:\Users\Muhammed Alaa Eddin\Documents\repos\PS3-Game-Updates-Downloader\GUI\bin\Debug\GUI.application
 C:\Users\Muhammed Alaa Eddin\Documents\repos\PS3-Game-Updates-Downloader\GUI\obj\Debug\GUI.exe.manifest
 C:\Users\Muhammed Alaa Eddin\Documents\repos\PS3-Game-Updates-Downloader\GUI\obj\Debug\GUI.application
+C:\Users\Muhammed Alaa Eddin\Documents\repos\PS3-Game-Updates-Downloader\GUI\obj\Debug\GUI.View.PS3UpdatesDownloaderGUI.resources

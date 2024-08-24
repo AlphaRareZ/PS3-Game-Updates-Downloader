@@ -1,6 +1,6 @@
 ﻿using System.Windows.Forms;
 
-namespace GUI
+namespace GUI.View
 {
     partial class PS3UpdatesDownloaderGUI
     {

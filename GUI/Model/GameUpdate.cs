@@ -8,13 +8,13 @@ using System.Threading.Tasks;
 
 namespace GUI.Model
 {
-    internal class GameUpdate:IComparable<GameUpdate>
+    internal class GameUpdate
     {
-
         public string gameID { get; set; }
         public string gameName { get; set; }
         public string version { get; set; }
         public string downloadUrl { get; set; }
+
         public GameUpdate(string gameID, string gameName, string version, string downloadUrl)
         {
             this.gameID = gameID;
@@ -29,14 +29,6 @@ namespace GUI.Model
             gameName = data[1];
             version = data[2];
             downloadUrl = data[3];
-        }
-
-        public int CompareTo(GameUpdate other)
-        {
-            if (other == null)
-                return 1; // Consider non-null as greater than null
-
-            return string.Compare(this.gameName, other.gameName, StringComparison.Ordinal);
         }
     }
 }
