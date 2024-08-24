@@ -14,6 +14,7 @@ namespace GUI.View
             _controller = new PS3UpdatesController();
             _controller.ProgressChanged += OnProgressChanged;
             _controller.DownloadCompleted += OnDownloadCompleted;
+
         }
 
         private void PS3GamesUpdater_Load(object sender, EventArgs e)

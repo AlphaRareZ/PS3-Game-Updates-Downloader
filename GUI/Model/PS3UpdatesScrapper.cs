@@ -1,8 +1,10 @@
 ﻿using System;
 using System;
 using System.Collections.Generic;
+using System.Linq;
 using System.Net;
 using System.Net.Http;
+using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using HtmlAgilityPack;
@@ -15,38 +17,32 @@ namespace GUI.Model
         private readonly List<GameUpdate> _gamesUpdates = new List<GameUpdate>();
         public bool Scrap()
         {
-            var web = new HtmlWeb();
+            var web = new HtmlWeb
+            {
+                AutoDetectEncoding = false,
+                OverrideEncoding = Encoding.UTF8
+            };
             var doc = web.Load(Url);
 
             // Get all <tbody> elements
             var tbodyNodes = doc.DocumentNode.SelectNodes("//tbody");
 
-            if (tbodyNodes != null)
+            if (tbodyNodes == null) return false;
+            foreach (var tbody in tbodyNodes)
             {
-                foreach (var tbody in tbodyNodes)
+                // Get all <tr> elements within this <tbody>
+                var trNodes = tbody.SelectNodes(".//tr");
+
+                if (trNodes == null) continue;
+                foreach (var tr in trNodes)
                 {
-                    // Get all <tr> elements within this <tbody>
-                    var trNodes = tbody.SelectNodes(".//tr");
+                    // Get all <td> elements within this <tr>
+                    var tdNodes = tr.SelectNodes(".//td");
 
-                    if (trNodes != null)
-                    {
-                        foreach (var tr in trNodes)
-                        {
-                            // Get all <td> elements within this <tr>
-                            var tdNodes = tr.SelectNodes(".//td");
+                    if (tdNodes == null) continue;
+                    var data = tdNodes.Select(td => td.InnerText.Trim()).Select(innerText => Encoding.UTF8.GetString(Encoding.Default.GetBytes(innerText))).ToList();
+                    _gamesUpdates.Add(new GameUpdate(data));
 
-                            if (tdNodes != null)
-                            {
-                                List<string> data = new List<string>();
-                                foreach (var td in tdNodes)
-                                {
-                                    data.Add(td.InnerText.Trim());
-                                }
-                                _gamesUpdates.Add(new GameUpdate(data));
-                            }
-
-                        }
-                    }
                 }
             }
             return true;
