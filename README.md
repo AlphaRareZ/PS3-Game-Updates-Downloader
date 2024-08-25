@@ -25,7 +25,7 @@ Run the application and enter `GameID` or `Game Name` and search in the database
 
 ### Download
 
-Download Here (https://www.mediafire.com/file/3qbqa2x336ghvje/PS3GameUpdateDownloader.rar/file)
+Download Here https://www.mediafire.com/file/8bk7ranpbevehm2/V2.rar/file
 
 ### Contributing
 
