@@ -1,10 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace GUI.Controller
+﻿namespace GUI.Controller
 {
     internal class Formatter
     {
@@ -13,12 +7,9 @@ namespace GUI.Controller
             // Convert file size to a human-readable format
             if (fileSize >= (1 << 30))
                 return $"{fileSize / (1 << 30):0.##} GB";
-            else if (fileSize >= (1 << 20))
+            if (fileSize >= (1 << 20))
                 return $"{fileSize / (1 << 20):0.##} MB";
-            else if (fileSize >= (1 << 10))
-                return $"{fileSize / (1 << 10):0.##} KB";
-            else
-                return $"{fileSize} bytes";
+            return fileSize >= (1 << 10) ? $"{fileSize / (1 << 10):0.##} KB" : $"{fileSize} bytes";
         }
     }
 }

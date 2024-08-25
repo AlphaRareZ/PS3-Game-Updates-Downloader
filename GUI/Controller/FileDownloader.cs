@@ -1,11 +1,7 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.ComponentModel;
 using System.IO;
-using System.Linq;
 using System.Net;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace GUI.Controller
 {
@@ -13,24 +9,25 @@ namespace GUI.Controller
     {
         public event Action<int> ProgressChanged;
         public event Action DownloadCompleted;
+
         internal void DownloadFile(string dir, string url)
         {
-            WebClient webClient = new WebClient();
-            webClient.DownloadFileCompleted += new AsyncCompletedEventHandler(Completed);
-            webClient.DownloadProgressChanged += new DownloadProgressChangedEventHandler(Changed);
+            var webClient = new WebClient();
+            webClient.DownloadFileCompleted += Completed;
+            webClient.DownloadProgressChanged += Changed;
 
             //Extract file name from url
-            string filename = Path.GetFileName(new Uri(url).AbsolutePath);
-            string filePath = Path.Combine(dir, filename);
+            var filename = Path.GetFileName(new Uri(url).AbsolutePath);
+            var filePath = Path.Combine(dir, filename);
             //Download File Asynchronously
             webClient.DownloadFileAsync(new Uri(url), filePath);
         }
+
         public long GetFileSize(string url)
         {
-            HttpWebRequest request = (HttpWebRequest)WebRequest.Create(url);
+            var request = (HttpWebRequest)WebRequest.Create(url);
             request.Method = "HEAD"; // Use HEAD method to get only the headers
-
-            using (HttpWebResponse response = (HttpWebResponse)request.GetResponse())
+            using (var response = (HttpWebResponse)request.GetResponse())
             {
                 var fileSize = response.ContentLength;
                 return fileSize;

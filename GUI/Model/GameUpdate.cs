@@ -1,34 +1,28 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Linq;
-using System.Runtime.Remoting.Messaging;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System.Collections.Generic;
 
 namespace GUI.Model
 {
     internal class GameUpdate
     {
-        public string gameID { get; set; }
-        public string gameName { get; set; }
-        public string version { get; set; }
-        public string downloadUrl { get; set; }
+        public string GameId { get; set; }
+        public string GameName { get; set; }
+        public string Version { get; set; }
+        public string DownloadUrl { get; set; }
 
-        public GameUpdate(string gameID, string gameName, string version, string downloadUrl)
+        public GameUpdate(string gameId, string gameName, string version, string downloadUrl)
         {
-            this.gameID = gameID;
-            this.gameName = gameName;
-            this.version = version;
-            this.downloadUrl = downloadUrl;
+            GameId = gameId;
+            GameName = gameName;
+            Version = version;
+            DownloadUrl = downloadUrl;
         }
 
         public GameUpdate(List<string> data)
         {
-            gameID = data[0];
-            gameName = data[1];
-            version = data[2];
-            downloadUrl = data[3];
+            GameId = data[0];
+            GameName = data[1];
+            Version = data[2];
+            DownloadUrl = data[3];
         }
     }
 }

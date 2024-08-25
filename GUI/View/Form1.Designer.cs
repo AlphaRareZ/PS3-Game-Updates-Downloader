@@ -1,14 +1,15 @@
-﻿using System.Drawing;
+﻿using System.ComponentModel;
+using System.Drawing;
 using System.Windows.Forms;
 
 namespace GUI.View
 {
-    partial class PS3UpdatesDownloaderGUI
+    partial class Ps3UpdatesDownloaderGui
     {
         /// <summary>
         /// Required designer variable.
         /// </summary>
-        private System.ComponentModel.IContainer components = null;
+        private IContainer components = null;
 
         /// <summary>
         /// Clean up any resources being used.
@@ -31,7 +32,7 @@ namespace GUI.View
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(PS3UpdatesDownloaderGUI));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Ps3UpdatesDownloaderGui));
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.searchBox = new System.Windows.Forms.TextBox();
             this.searchLabel = new System.Windows.Forms.Label();
@@ -144,7 +145,7 @@ namespace GUI.View
             this.Controls.Add(this.dataGridView1);
             this.DoubleBuffered = true;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Name = "PS3UpdatesDownloaderGUI";
+            this.Name = "Ps3UpdatesDownloaderGui";
             this.Text = "PS3 Game Updates Downloader";
             this.Load += new System.EventHandler(this.PS3GamesUpdater_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
@@ -155,10 +156,10 @@ namespace GUI.View
 
         #endregion
 
-        public System.Windows.Forms.DataGridView dataGridView1;
-        private System.Windows.Forms.TextBox searchBox;
-        private System.Windows.Forms.Label searchLabel;
-        private System.Windows.Forms.Button downloadButton;
+        public DataGridView dataGridView1;
+        private TextBox searchBox;
+        private Label searchLabel;
+        private Button downloadButton;
         private FolderBrowserDialog folderBrowserDialog1;
         private Button BrowseButton;
         private Label DownloadDirLabel;

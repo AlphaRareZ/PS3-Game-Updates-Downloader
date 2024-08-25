@@ -4,17 +4,16 @@ using GUI.Controller;
 
 namespace GUI.View
 {
-    public partial class PS3UpdatesDownloaderGUI : Form
+    public partial class Ps3UpdatesDownloaderGui : Form
     {
-        private readonly PS3UpdatesController _controller;
+        private readonly Ps3UpdatesController _controller;
 
-        public PS3UpdatesDownloaderGUI()
+        public Ps3UpdatesDownloaderGui()
         {
             InitializeComponent();
-            _controller = new PS3UpdatesController();
-            _controller.addProgressChangedHandler(OnProgressChanged);
-            _controller.addDownloadCompletedHandler(OnDownloadCompleted);
-
+            _controller = new Ps3UpdatesController();
+            _controller.AddProgressChangedHandler(OnProgressChanged);
+            _controller.AddDownloadCompletedHandler(OnDownloadCompleted);
         }
 
         private void PS3GamesUpdater_Load(object sender, EventArgs e)
@@ -24,38 +23,9 @@ namespace GUI.View
             dataGridView1.Columns[3].Visible = false;
         }
 
-        private void DownloadButton_Click(object sender, EventArgs e)
+        private void BrowseButton_Click(object sender, EventArgs e)
         {
-            string dir = DownloadDirTextBox.Text;
-            long totalSizes = 0;
-            string eachFileSize = string.Empty;
-            foreach (DataGridViewRow row in dataGridView1.SelectedRows)
-            {
-                var downloadUrl = row.Cells[3].Value.ToString();
-                long fileSize = _controller.GetFileSize(downloadUrl);
-                totalSizes += fileSize;
-                eachFileSize += $"Version {row.Cells[2].Value.ToString()}: {_controller.FormatFileSize(fileSize)}\n";
-            }
-
-            string message =
-                $"{eachFileSize} \nThe files eachFileSize is {_controller.FormatFileSize(totalSizes)}. Do you want to continue with the download?";
-            DialogResult result = MessageBox.Show(message, "File Size Confirmation", MessageBoxButtons.YesNo,
-            MessageBoxIcon.Question);
-
-            // Check the result of the user's choice
-            if (result == DialogResult.Yes)
-            {
-                foreach (DataGridViewRow row in dataGridView1.SelectedRows)
-                {
-                    var downloadUrl = row.Cells[3].Value.ToString();
-                    _controller.DownloadFile(dir, downloadUrl);
-                }
-            }
-        }
-
-        private void BrowseButton_Click(object sender, System.EventArgs e)
-        {
-            FolderBrowserDialog fbd = new FolderBrowserDialog();
+            var fbd = new FolderBrowserDialog();
             fbd.ShowDialog();
             DownloadDirTextBox.Text = fbd.SelectedPath;
         }
@@ -67,12 +37,40 @@ namespace GUI.View
 
         private void OnDownloadCompleted()
         {
-            MessageBox.Show("File Downloaded");
+            MessageBox.Show(@"File Downloaded");
         }
 
         private void searchBox_TextChanged(object sender, EventArgs e)
         {
             dataGridView1.DataSource = _controller.Search(searchBox.Text);
+        }
+
+        private void DownloadButton_Click(object sender, EventArgs e)
+        {
+            var dir = DownloadDirTextBox.Text;
+            long totalSizes = 0;
+            var eachFileSize = string.Empty;
+            foreach (DataGridViewRow row in dataGridView1.SelectedRows)
+            {
+                var downloadUrl = row.Cells[3].Value.ToString();
+                var fileSize = _controller.GetFileSize(downloadUrl);
+                totalSizes += fileSize;
+                eachFileSize += $"Version {row.Cells[2].Value}: {_controller.FormatFileSize(fileSize)}\n";
+            }
+
+            var message =
+                $"{eachFileSize} \nThe files eachFileSize is {_controller.FormatFileSize(totalSizes)}. Do you want to continue with the download?";
+            var result = MessageBox.Show(message, "File Size Confirmation", MessageBoxButtons.YesNo,
+                MessageBoxIcon.Question);
+
+            // Check the result of the user's choice
+            if (result != DialogResult.Yes) return;
+
+            foreach (DataGridViewRow row in dataGridView1.SelectedRows)
+            {
+                var downloadUrl = row.Cells[3].Value.ToString();
+                _controller.DownloadFile(dir, downloadUrl);
+            }
         }
     }
 }

@@ -1,20 +1,16 @@
-﻿using System;
-using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.Linq;
-using System.Net;
-using System.Net.Http;
 using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Forms;
 using HtmlAgilityPack;
+
 namespace GUI.Model
 {
-    internal class PS3UpdatesScrapper:IScrapper
+    internal class Ps3UpdatesScrapper : IScrapper
     {
         private const string Url = "https://ps3.aldostools.org/updates.html";
 
         private readonly List<GameUpdate> _gamesUpdates = new List<GameUpdate>();
+
         public bool Scrap()
         {
             var web = new HtmlWeb
@@ -40,13 +36,15 @@ namespace GUI.Model
                     var tdNodes = tr.SelectNodes(".//td");
 
                     if (tdNodes == null) continue;
-                    var data = tdNodes.Select(td => td.InnerText.Trim()).Select(innerText => Encoding.UTF8.GetString(Encoding.Default.GetBytes(innerText))).ToList();
+                    var data = tdNodes.Select(td => td.InnerText.Trim()).Select(innerText =>
+                        Encoding.UTF8.GetString(Encoding.Default.GetBytes(innerText))).ToList();
                     _gamesUpdates.Add(new GameUpdate(data));
-
                 }
             }
+
             return true;
         }
+
         public List<GameUpdate> GetGamesUpdates()
         {
             return _gamesUpdates;

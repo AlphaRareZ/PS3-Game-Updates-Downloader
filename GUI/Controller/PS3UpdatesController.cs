@@ -1,63 +1,61 @@
-﻿using GUI.Model;
-using System;
+﻿using System;
 using System.Collections.Generic;
-using System.ComponentModel;
-using System.IO;
-using System.Linq;
-using System.Net;
-using GUI.View;
-
+using GUI.Model;
 
 namespace GUI.Controller
 {
-    internal class PS3UpdatesController
+    internal class Ps3UpdatesController
     {
         // Model
-        private PS3UpdatesScrapper scrapper = new PS3UpdatesScrapper();
+        private readonly Ps3UpdatesScrapper _scrapper = new Ps3UpdatesScrapper();
+
         // Formatter
-        public Formatter formatter = new Formatter();
+        private readonly Formatter _formatter = new Formatter();
+
         // Downloader
-        FileDownloader fileDownloader = new FileDownloader();
+        private readonly FileDownloader _fileDownloader = new FileDownloader();
 
 
         internal List<GameUpdate> GetUpdates()
         {
-            return scrapper.GetGamesUpdates();
+            return _scrapper.GetGamesUpdates();
         }
 
         internal bool Scrap()
         {
-            return scrapper.Scrap();
+            return _scrapper.Scrap();
         }
 
         internal List<GameUpdate> Search(string text)
         {
-            GameUpdatesSearcher updatesFinder = new GameUpdatesSearcher(GetUpdates());
+            var updatesFinder = new GameUpdatesSearcher(GetUpdates());
             updatesFinder.Search(text);
             return updatesFinder.GetUpdates();
         }
+
         public long GetFileSize(string url)
         {
-            return fileDownloader.GetFileSize(url);
-        }
-        internal void DownloadFile(string dir, string downloadUrl)
-        {
-            fileDownloader.DownloadFile(dir, downloadUrl);
-        }
-        
-        internal void addProgressChangedHandler(Action<int> onProgressChanged)
-        {
-            fileDownloader.ProgressChanged += onProgressChanged;
+            return _fileDownloader.GetFileSize(url);
         }
 
-        internal void addDownloadCompletedHandler(Action onDownloadCompleted)
+        internal void DownloadFile(string dir, string downloadUrl)
         {
-            fileDownloader.DownloadCompleted += onDownloadCompleted;
+            _fileDownloader.DownloadFile(dir, downloadUrl);
+        }
+
+        internal void AddProgressChangedHandler(Action<int> onProgressChanged)
+        {
+            _fileDownloader.ProgressChanged += onProgressChanged;
+        }
+
+        internal void AddDownloadCompletedHandler(Action onDownloadCompleted)
+        {
+            _fileDownloader.DownloadCompleted += onDownloadCompleted;
         }
 
         public string FormatFileSize(long fileSize)
         {
-            return formatter.FormatFileSize(fileSize);
+            return _formatter.FormatFileSize(fileSize);
         }
     }
 }
