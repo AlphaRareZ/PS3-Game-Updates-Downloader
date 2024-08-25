@@ -78,7 +78,9 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Controller\FileDownloader.cs" />
     <Compile Include="Controller\Formatter.cs" />
+    <Compile Include="Controller\GameUpdatesSearcher.cs" />
     <Compile Include="Controller\PS3UpdatesController.cs" />
     <Compile Include="Model\GameUpdate.cs" />
     <Compile Include="Model\Scrapper.cs" />

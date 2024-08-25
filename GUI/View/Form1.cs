@@ -12,8 +12,8 @@ namespace GUI.View
         {
             InitializeComponent();
             _controller = new PS3UpdatesController();
-            _controller.ProgressChanged += OnProgressChanged;
-            _controller.DownloadCompleted += OnDownloadCompleted;
+            _controller.addProgressChangedHandler(OnProgressChanged);
+            _controller.addDownloadCompletedHandler(OnDownloadCompleted);
 
         }
 
@@ -28,19 +28,19 @@ namespace GUI.View
         {
             string dir = DownloadDirTextBox.Text;
             long totalSizes = 0;
-            string sizes = string.Empty;
+            string eachFileSize = string.Empty;
             foreach (DataGridViewRow row in dataGridView1.SelectedRows)
             {
                 var downloadUrl = row.Cells[3].Value.ToString();
                 long fileSize = _controller.GetFileSize(downloadUrl);
-                sizes += $"Version {row.Cells[2].Value.ToString()}: {_controller.formatter.FormatFileSize(fileSize)}\n";
                 totalSizes += fileSize;
+                eachFileSize += $"Version {row.Cells[2].Value.ToString()}: {_controller.FormatFileSize(fileSize)}\n";
             }
 
             string message =
-                $"{sizes} \nThe files sizes is {_controller.formatter.FormatFileSize(totalSizes)}. Do you want to continue with the download?";
+                $"{eachFileSize} \nThe files eachFileSize is {_controller.FormatFileSize(totalSizes)}. Do you want to continue with the download?";
             DialogResult result = MessageBox.Show(message, "File Size Confirmation", MessageBoxButtons.YesNo,
-                MessageBoxIcon.Question);
+            MessageBoxIcon.Question);
 
             // Check the result of the user's choice
             if (result == DialogResult.Yes)
