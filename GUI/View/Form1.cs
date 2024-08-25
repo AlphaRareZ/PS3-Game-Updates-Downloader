@@ -48,6 +48,17 @@ namespace GUI.View
         private void DownloadButton_Click(object sender, EventArgs e)
         {
             var dir = DownloadDirTextBox.Text;
+
+            if (!DownloadConfirmation()) return;
+
+            foreach (DataGridViewRow row in dataGridView1.SelectedRows)
+            {
+                var downloadUrl = row.Cells[3].Value.ToString();
+                _controller.DownloadFile(dir, downloadUrl);
+            }
+        }
+        private bool DownloadConfirmation()
+        {
             long totalSizes = 0;
             var eachFileSize = string.Empty;
             foreach (DataGridViewRow row in dataGridView1.SelectedRows)
@@ -57,20 +68,14 @@ namespace GUI.View
                 totalSizes += fileSize;
                 eachFileSize += $"Version {row.Cells[2].Value}: {_controller.FormatFileSize(fileSize)}\n";
             }
-
             var message =
-                $"{eachFileSize} \nThe files eachFileSize is {_controller.FormatFileSize(totalSizes)}. Do you want to continue with the download?";
+                $"{eachFileSize} \nThe Files Sizes is {_controller.FormatFileSize(totalSizes)}. Do you want to continue with the download?";
             var result = MessageBox.Show(message, "File Size Confirmation", MessageBoxButtons.YesNo,
                 MessageBoxIcon.Question);
 
             // Check the result of the user's choice
-            if (result != DialogResult.Yes) return;
-
-            foreach (DataGridViewRow row in dataGridView1.SelectedRows)
-            {
-                var downloadUrl = row.Cells[3].Value.ToString();
-                _controller.DownloadFile(dir, downloadUrl);
-            }
+            if (result != DialogResult.Yes) return false;
+            return true;
         }
     }
 }

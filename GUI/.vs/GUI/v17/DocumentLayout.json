@@ -3,7 +3,7 @@
   "WorkspaceRootPath": "C:\\Users\\Muhammed Alaa Eddin\\Documents\\repos\\PS3-Game-Updates-Downloader\\GUI\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{F83F8D91-54CB-434F-9A47-400BE761F9F1}|PS3GameUpdateDownloader.csproj|C:\\Users\\Muhammed Alaa Eddin\\Documents\\repos\\PS3-Game-Updates-Downloader\\GUI\\view\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{F83F8D91-54CB-434F-9A47-400BE761F9F1}|PS3GameUpdateDownloader.csproj|c:\\users\\muhammed alaa eddin\\documents\\repos\\ps3-game-updates-downloader\\gui\\view\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{F83F8D91-54CB-434F-9A47-400BE761F9F1}|PS3GameUpdateDownloader.csproj|solutionrelative:view\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
@@ -15,11 +15,11 @@
       "RelativeMoniker": "D:0:0:{F83F8D91-54CB-434F-9A47-400BE761F9F1}|PS3GameUpdateDownloader.csproj|solutionrelative:controller\\formatter.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{F83F8D91-54CB-434F-9A47-400BE761F9F1}|PS3GameUpdateDownloader.csproj|c:\\users\\muhammed alaa eddin\\documents\\repos\\ps3-game-updates-downloader\\gui\\controller\\filedownloader.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{F83F8D91-54CB-434F-9A47-400BE761F9F1}|PS3GameUpdateDownloader.csproj|C:\\Users\\Muhammed Alaa Eddin\\Documents\\repos\\PS3-Game-Updates-Downloader\\GUI\\controller\\filedownloader.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{F83F8D91-54CB-434F-9A47-400BE761F9F1}|PS3GameUpdateDownloader.csproj|solutionrelative:controller\\filedownloader.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{F83F8D91-54CB-434F-9A47-400BE761F9F1}|PS3GameUpdateDownloader.csproj|c:\\users\\muhammed alaa eddin\\documents\\repos\\ps3-game-updates-downloader\\gui\\controller\\gameupdatessearcher.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{F83F8D91-54CB-434F-9A47-400BE761F9F1}|PS3GameUpdateDownloader.csproj|C:\\Users\\Muhammed Alaa Eddin\\Documents\\repos\\PS3-Game-Updates-Downloader\\GUI\\controller\\gameupdatessearcher.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{F83F8D91-54CB-434F-9A47-400BE761F9F1}|PS3GameUpdateDownloader.csproj|solutionrelative:controller\\gameupdatessearcher.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
@@ -50,8 +50,7 @@
               "RelativeToolTip": "Controller\\GameUpdatesSearcher.cs",
               "ViewState": "AQIAAAkAAAAAAAAAAAAAABoAAAAwAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-08-25T15:12:28.079Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-08-25T15:12:28.079Z"
             },
             {
               "$type": "Document",
@@ -63,8 +62,7 @@
               "RelativeToolTip": "Controller\\FileDownloader.cs",
               "ViewState": "AQIAAAYAAAAAAAAAAAAAACAAAAAeAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-08-25T14:50:05.445Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-08-25T14:50:05.445Z"
             },
             {
               "$type": "Document",
@@ -76,8 +74,7 @@
               "RelativeToolTip": "Controller\\Formatter.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAoAAAAIAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-08-24T13:23:32.496Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-08-24T13:23:32.496Z"
             },
             {
               "$type": "Document",
@@ -89,8 +86,7 @@
               "RelativeToolTip": "Controller\\PS3UpdatesController.cs",
               "ViewState": "AQIAABEAAAAAAAAAAAAQwBgAAAArAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-08-24T13:21:30.239Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-08-24T13:21:30.239Z"
             },
             {
               "$type": "Document",
@@ -100,7 +96,7 @@
               "RelativeDocumentMoniker": "View\\Form1.cs",
               "ToolTip": "C:\\Users\\Muhammed Alaa Eddin\\Documents\\repos\\PS3-Game-Updates-Downloader\\GUI\\View\\Form1.cs",
               "RelativeToolTip": "View\\Form1.cs",
-              "ViewState": "AQIAAC4AAAAAAAAAAAAIwDkAAABAAAAA",
+              "ViewState": "AQIAACcAAAAAAAAAAAAowDMAAAAwAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-08-24T13:19:54.35Z",
               "EditorCaption": ""
@@ -114,8 +110,7 @@
               "ToolTip": "C:\\Users\\Muhammed Alaa Eddin\\Documents\\repos\\PS3-Game-Updates-Downloader\\GUI\\View\\Form1.cs [Design]",
               "RelativeToolTip": "View\\Form1.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-08-24T13:19:34.982Z",
-              "EditorCaption": " [Design]"
+              "WhenOpened": "2024-08-24T13:19:34.982Z"
             }
           ]
         }
