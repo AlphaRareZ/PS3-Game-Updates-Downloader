@@ -21,7 +21,7 @@ This repository contains a .NET-based application designed to automate the proce
 
 ### Usage
 
-Run the application and enter `GameID` or `Game Name` and search in the database that contains `7100 Games`
+Run the application and enter `GameID` or `Game Name` and search in the database that contains `7100 Game Updates`
 
 ### Download
 
