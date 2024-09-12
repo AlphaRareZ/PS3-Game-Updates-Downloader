@@ -2,6 +2,8 @@
 
 This repository contains a .NET-based application designed to automate the process of downloading game updates for the PlayStation 3 (PS3). The tool utilizes web scraping techniques to retrieve the latest game update data in the form of PKG files.
 
+### Experience
+![altText](GUI/Images/pic1.png)
 ### Features
 
 - **Automatic Downloading:** Automatically fetches and downloads the latest game updates for PS3 games.
@@ -17,7 +19,6 @@ This repository contains a .NET-based application designed to automate the proce
 
 1. Clone the repository: `git clone https://github.com/AlphaRareZ/PS3-Game-Updates-Downloader`
 2. Navigate to the project directory and build the solution.
-3. Configure any necessary settings in the configuration file.
 
 ### Usage
 
